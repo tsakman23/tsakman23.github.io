@@ -163,9 +163,9 @@ Here was the real trick. Searching a bit on the internet, we discovered that man
 
 This leads to another thought: Maybe the score of the hand is important, possibly the private key for the ECC encryption. Using [this site](https://efhiii.github.io/balatro-calculator/?h=oAD2EYGkCQtAQAB9p-0_aftM) with the provided parameters included, we obtain a score of 483,662,483,600. Converting this number to hex yields us the private key `0x709c87d090`, which we can quickly verify with the public key provided in the packet. We are on the right track.
 
-Another thought is that the shared secret (the result of the ECC encryption) is used as the key for the AES encryption - more specifically the x-coordinate of the point. We can use the public key and the private key to derive the shared secret using the `ecdsa` library. 
+Another thought would have been that the shared secret (the result of the ECC encryption) is used as the key for the AES encryption - more specifically the x-coordinate of the point. However, the admin got carried away and just ended up using the public key instead of the shared secret as the key for AES!!! Big curveball, still laughing about it with my teammates... Alternatively, we would have had a peer to exchange the secret with from whom we would obtain the shared secret.
 
-To be able to use the secret, we need to ensure that it is exactly 256 bits for AES to successfully decrypt the ciphertext. We can do this by hashing the shared secret with SHA256.
+To be able to use the secret - or rather public key here, we need to ensure that it is exactly 256 bits for AES to successfully decrypt the ciphertext. We can do this by hashing it with SHA256.
 
 Finally, we can use the derived key to decrypt the ciphertext using AES in CBC mode. The IV is also provided in the packet.
 
