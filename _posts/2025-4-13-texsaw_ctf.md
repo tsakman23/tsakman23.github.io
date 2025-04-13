@@ -3,6 +3,8 @@ title: TexSAW CTF 2025 - Writeups
 time: 2025-4-13 22:00:00
 categories: [ctf]
 tags: [cryptography, texsaw]
+comments: true
+image: /assets/posts/texsaw_ctf/texsaw.png
 ---
 
 This is a writeup for some cryptography challenges I solved during TexSAW CTF 2025 as part of Lil L3ak. Very competitive ctf, but we secured 1st place!
