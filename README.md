@@ -17,23 +17,21 @@ This repository contains a Jekyll site. The recommended way to run and edit it i
 
 This repository already includes `.devcontainer/devcontainer.json`.
 
-1. Clone the repository:
+1. Open the Command Palette (`Ctrl/Cmd+Shift+P`) and run **Dev Containers: Clone Repository in Container Volume**.
+2. Enter this repository URL when prompted:
 
-   ```bash
-   git clone https://github.com/tsakman23/tsakman23.github.io.git
-   cd tsakman23.github.io
+   ```text
+   https://github.com/tsakman23/tsakman23.github.io.git
    ```
 
-2. Open the folder in VS Code.
-3. Open the Command Palette (`Ctrl/Cmd+Shift+P`) and run **Dev Containers: Reopen in Container**.
-4. Wait for container setup to finish.
-5. Start the Jekyll server:
+3. Select the created container workspace in VS Code and wait for setup to finish.
+4. Start the Jekyll server:
 
    ```bash
    bundle exec jekyll serve --livereload
    ```
 
-6. Open <http://127.0.0.1:4000> in your browser.
+5. Open <http://127.0.0.1:4000> in your browser.
 
 Keep the terminal running while you edit files; Jekyll will rebuild and live reload changes.
 
@@ -57,6 +55,6 @@ Then open <http://127.0.0.1:4000>.
 
 ## Troubleshooting
 
-- **Container startup issues:** Ensure Docker is running, then retry **Dev Containers: Reopen in Container**.
+- **Container startup issues:** Ensure Docker is running, then retry **Dev Containers: Clone Repository in Container Volume**.
 - **Dependency install errors:** Run `bundle install` in the project root and retry `bundle exec jekyll serve --livereload`.
 - **Port conflicts on 4000:** Stop the other process using port 4000, or run Jekyll on another port, for example `bundle exec jekyll serve --livereload --port 4001`.
