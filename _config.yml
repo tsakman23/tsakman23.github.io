@@ -14,7 +14,7 @@ timezone: BST
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: tsakman
+title: George Tsakoumakis
 
 tagline: Aspiring AI engineer and cyber security enthusiast.
 
@@ -92,7 +92,8 @@ theme_mode: dark
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/avatar.webp
+# avatar: /assets/img/avatar.webp
+avatar: /assets/img/profile.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
